@@ -18,9 +18,6 @@ std::vector<Cornu::BasicPrimitive> fit(const py::array_t<double, py::array::c_st
     std::vector<Cornu::Point> points(points_np.shape()[0]);
     std::memcpy(&points[0], pts_np.data(0, 0), pts_np.nbytes());
 
-    for (auto const& pt: points) {
-        std::cout << pt.x << ", " << pt.y << std::endl;
-    }
     auto primitives = Cornu::fit(points, parameters);
 
     return primitives;
