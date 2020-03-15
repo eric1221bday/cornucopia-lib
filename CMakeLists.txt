@@ -13,7 +13,7 @@ ENDIF(NOT CMAKE_BUILD_TYPE)
 IF(MSVC)
    ADD_DEFINITIONS(/arch:SSE2 /fp:fast)
 ELSE(MSVC)
-   ADD_DEFINITIONS(-ffast-math)
+#   ADD_DEFINITIONS(-ffast-math)
 ENDIF(MSVC)
 
 #Find Eigen 3
